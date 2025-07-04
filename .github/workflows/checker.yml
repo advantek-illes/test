@@ -1,0 +1,22 @@
+name: Lint, Format and Type Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+
+      - name: ruff-action
+        uses: astral-sh/ruff-action@v3
+          
