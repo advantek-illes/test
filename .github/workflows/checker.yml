@@ -1,4 +1,4 @@
-name: Lint, Format and Type Check
+name: lint-format-type-check
 
 on:
   push:
